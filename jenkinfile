@@ -12,14 +12,14 @@ pipeline {
         stage('Compile') {
             steps {
                 // Compile the Java program
-                sh 'javac calc.java'
+                bat 'javac calc.java'
             }
         }
         
         stage('Test Add') {
             steps {
                 // Test addition
-                sh 'java calc 10 5 add > output.txt'
+                bat 'java calc 10 5 add > result'
                 if (result == 15) {
                     echo 'Addition test passed'
                 } else {
@@ -31,7 +31,7 @@ pipeline {
         stage('Test Sub') {
             steps {
                 // Test subtraction
-                sh 'java Calc 10 5 sub > output.txt'
+                bat 'java Calc 10 5 sub > output.txt'
                 if (result == 5) {
                     echo 'Subtraction test passed'
                 } else {
