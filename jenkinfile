@@ -20,6 +20,7 @@ pipeline {
             steps {
                 // Test addition
                 bat 'java calc 10 5 add > result'
+                echo result
                 if (result == 15) {
                     echo 'Addition test passed'
                 } else {
