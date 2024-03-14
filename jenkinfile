@@ -18,7 +18,7 @@ pipeline {
                 script {
                     // Test addition
                     bat 'java Calc 10 5 add > result'
-                    if (result == 15) {
+                    if (result == 15.0) {
                         echo 'Addition test passed'
                     } else {
                         error 'Addition test failed'
