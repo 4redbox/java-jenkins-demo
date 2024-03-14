@@ -21,6 +21,7 @@ pipeline {
                     if (result == 15.0) {
                         echo 'Addition test passed'
                     } else {
+                        echo 'test failed'
                         error 'Addition test failed'
                     }
                 }
