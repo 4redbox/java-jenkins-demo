@@ -17,22 +17,22 @@ public class Calc {
         switch(operation) {
             case "add":
                 result = num1 + num2;
-                System.out.println("Result: " + result);
+                System.out.println(result);
                 break;
             case "sub":
                 result = num1 - num2;
-                System.out.println("Result: " + result);
+                System.out.println(result);
                 break;
             case "mul":
                 result = num1 * num2;
-                System.out.println("Result: " + result);
+                System.out.println(result);
                 break;
             case "div":
                 if(num2 == 0) {
                     System.out.println("Error: Division by zero!");
                 } else {
                     result = num1 / num2;
-                    System.out.println("Result: " + result);
+                    System.out.println(result);
                 }
                 break;
             default:
