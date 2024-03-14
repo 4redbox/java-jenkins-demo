@@ -18,7 +18,6 @@ pipeline {
                 script {
                     // Test addition
                     bat 'java Calc 10 5 add > output.txt'
-                    def result = readFile('output.txt').trim().toBigDecimal()
                     if (result == 15) {
                         echo 'Addition test passed'
                     } else {
