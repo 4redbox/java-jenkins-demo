@@ -5,6 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'redbox', url: 'https://github.com/4redbox/java-jenkins-demo.git']])            }
+                echo 'Checkout Complete'
         }
         
         stage('Compile') {
@@ -18,6 +19,7 @@ pipeline {
                 script {
                     // Test addition
                     bat 'java Calc 10 5 add > result'
+                    def result = readFile('result').trim().toDouble()
                     if (result == 15.0) {
                         echo 'Addition test passed'
                     } else {
