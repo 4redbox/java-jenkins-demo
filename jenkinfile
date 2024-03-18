@@ -9,6 +9,8 @@ pipeline {
         
         stage('Compile') {
             steps {
+                sh 'ls'
+                sh 'java --version'
                 sh 'javac Calc.java'
             }
         }
