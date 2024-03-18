@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'java --version'
+                sh 'pwd'
                 sh 'javac Calc.java'
             }
         }
