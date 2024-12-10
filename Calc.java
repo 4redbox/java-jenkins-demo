@@ -1,8 +1,8 @@
 public class Calc {
     public static void main(String[] args) {
-        // Checking if the correct number of arguments is provided
+        // Checking if the correct number of arguments is provided in the program
         if(args.length != 3) {
-            System.out.println("Usage: java Calculator <num1> <num2> <operation>");
+            System.out.println("Pass as this changed by dev: java Calculator <num1> <num2> <operation>");
             System.out.println("Example: java Calculator 10 5 add");
             return;
         }
